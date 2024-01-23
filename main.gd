@@ -16,4 +16,5 @@ func new_game():
 	$Player.start($PlayerStartPosition.position)
 	$Player2StartPosition.position = Vector2(screen_size[0], 0)
 	$Player2.start($Player2StartPosition.position)
+	$Ball.start($BallStartPosition.position)
 	

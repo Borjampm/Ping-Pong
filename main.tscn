@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bxrk6qdqmq4t0"]
+[gd_scene load_steps=5 format=3 uid="uid://bxrk6qdqmq4t0"]
 
 [ext_resource type="PackedScene" uid="uid://048vtvdena2" path="res://player.tscn" id="1_mii40"]
 [ext_resource type="Script" path="res://main.gd" id="1_yx5ij"]
 [ext_resource type="PackedScene" uid="uid://b2sml888w4bm8" path="res://player2.tscn" id="2_xw14p"]
+[ext_resource type="PackedScene" uid="uid://dr13jenrkvbce" path="res://ball.tscn" id="4_14fal"]
 
 [node name="main" type="Node"]
 script = ExtResource("1_yx5ij")
@@ -14,3 +15,8 @@ script = ExtResource("1_yx5ij")
 [node name="PlayerStartPosition" type="Marker2D" parent="."]
 
 [node name="Player2StartPosition" type="Marker2D" parent="."]
+
+[node name="Ball" parent="." instance=ExtResource("4_14fal")]
+
+[node name="BallStartPosition" type="Marker2D" parent="."]
+position = Vector2(100, 100)
