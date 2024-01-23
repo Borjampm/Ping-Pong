@@ -30,3 +30,11 @@ func start(pos):
 	position = pos
 	velocity = velocity * speed
 	show()
+
+
+func _on_player_area_entered(area):
+	velocity[0] = velocity[0] * -1
+
+
+func _on_player_2_area_entered(area):
+	velocity[0] = velocity[0] * -1

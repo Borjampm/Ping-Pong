@@ -20,3 +20,6 @@ script = ExtResource("1_yx5ij")
 
 [node name="BallStartPosition" type="Marker2D" parent="."]
 position = Vector2(100, 100)
+
+[connection signal="area_entered" from="Player" to="Ball" method="_on_player_area_entered"]
+[connection signal="area_entered" from="Player2" to="Ball" method="_on_player_2_area_entered"]

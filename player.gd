@@ -10,9 +10,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var velocity = Vector2.ZERO
-	if Input.is_action_pressed("move_up"):
+	if Input.is_action_pressed("P1_move_up"):
 		velocity.y -= 1
-	if Input.is_action_pressed("move_down"):
+	if Input.is_action_pressed("P1_move_down"):
 		velocity.y += 1 
 	velocity = velocity * speed
 	
@@ -23,3 +23,4 @@ func start(pos):
 	position = pos
 	position.x = position.x + $Sprite2D.scale[0]/2
 	show()
+

@@ -9,7 +9,15 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	var velocity = Vector2.ZERO
+	if Input.is_action_pressed("P2_move_up"):
+		velocity.y -= 1
+	if Input.is_action_pressed("P2_move_down"):
+		velocity.y += 1 
+	velocity = velocity * speed
+	
+	position += velocity * delta
+	position.y = clamp(position.y, 50, screen_size[1]-50)
 	
 func start(pos):
 	position = pos
